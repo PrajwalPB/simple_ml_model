@@ -1,0 +1,10 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 9090  # Prometheus target port inside the container
+    hostPort: 9090 
+    listenAddress: "127.0.0.1"     # Port on the host machine to forward Prometheus traffic to
+  - containerPort: 3000  # Grafana target port inside the container
+    hostPort: 3000      # Port on the host machine to forward Grafana traffic to
