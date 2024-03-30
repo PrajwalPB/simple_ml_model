@@ -1,3 +1,4 @@
 __pycache__
 *.pyc
 venv/
+k8s_yaml
